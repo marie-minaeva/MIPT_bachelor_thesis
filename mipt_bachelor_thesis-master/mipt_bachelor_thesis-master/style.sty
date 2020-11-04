@@ -1,0 +1,172 @@
+\ProvidesPackage{style}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{array}
+\usepackage{bm}
+\usepackage{cancel}
+\usepackage{comment}
+
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
+\usepackage{epsfig} 
+\usepackage{epstopdf}
+\usepackage{faktor} 
+\usepackage{listings}
+\usepackage{tikz-cd}
+\usepackage{titling} 
+%\usepackage{tkz-berge}
+\usepackage{multicol}
+\usepackage{url} 
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{xparse}
+\usepackage{wrapfig}
+\usepackage{icomma}
+
+\usepackage{cmap}
+\usepackage[T2A]{fontenc} 
+\usepackage[utf8]{inputenc} 
+\usepackage[english,russian]{babel}
+\usepackage[normalem]{ulem}
+\usepackage{fancyvrb}
+
+\selectlanguage{russian} 
+\usepackage[onelanguage,ruled,vlined]{algorithm2e}
+
+\SetKwInput{KwData}{Исходные параметры}
+\SetKwInput{KwResult}{Результат}
+\SetKwInput{KwIn}{Входные данные}
+\SetKwInput{KwOut}{Выходные данные}
+\SetKwIF{If}{ElseIf}{Else}{если}{тогда}{иначе если}{иначе}{конец условия}
+\SetKwFor{While}{до тех пор, пока}{выполнять}{конец цикла}
+\SetKw{KwTo}{до}
+\SetKw{KwBy}{с шагом}
+\SetKw{KwRet}{возвратить}
+\SetKw{Return}{возвратить}
+\SetKwBlock{Begin}{начало блока}{конец блока}
+\SetKwSwitch{Switch}{Case}{Other}{Проверить значение}{и выполнить}{вариант}{в противном случае}{конец варианта}{конец проверки значений}
+\SetKwFor{For}{цикл}{выполнять}{конец цикла}
+\SetKwFor{ForEach}{для каждого}{выполнять}{конец цикла}
+\SetKwRepeat{Repeat}{повторять}{до тех пор, пока}
+\SetAlgorithmName{Алгоритм}{алгоритм}{Список алгоритмов}
+
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{wrapfig}
+
+\usepackage{tikz}
+\usetikzlibrary{bayesnet}
+\usepackage{pgfplots}
+\usepackage{pgf}
+
+\usepackage{subfiles}
+
+\usepackage{mdframed}
+\usepackage[hidelinks]{hyperref}
+\usepackage{todonotes}
+
+\graphicspath{{Images/}{../Images/}{images/} {../images/}} 
+
+\usepackage{math}
+\def\mathunderline#1#2{\color{#1}\underline{{\color{black}#2}}\color{black}}
+
+\def\E{\mathbb{E}}
+\def\Var{\mathrm{Var}}
+\def\cov{\mathrm{cov}}
+\def\corr{\mathrm{corr}}
+\def\salg{\mathcal{F}}
+\def\P{\mathrm{P}}
+\def\borel{\mathcal{B}}
+\def\cantor{\mathcal{C}}
+
+\def\eps{\varepsilon}
+\def\phi{\varphi}
+\def\Real{\mathbb{R}}
+\def\Proj{\mathbb{P}}
+\def\Hyper{\mathbb{H}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\def\C{\mathbb{C}}
+\def\R{\mathbb{Q}}
+\def\tr{\mbox{tr}}
+\def\grad{\nabla}
+\def\mse{\mbox{MSE}}
+\def\etheta{\widehat{\theta}}
+\def\le{\leqslant}
+\def\ge{\geqslant}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem*{hypo}{Гипотеза}
+\newtheorem{lemma}{Лемма}[section]
+\newtheorem{corollary}{Следствие}
+\newtheorem*{fact}{Факт}
+
+\theoremstyle{remark}
+\newtheorem{claim}{Утверждение}[section]
+\newtheorem{remark}{Замечание}[section]
+\newtheorem*{task}{Упражнение}
+\newtheorem*{symb}{Обозначение}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}[section]
+\newtheorem{example}{Пример}[section]
+
+\numberwithin{equation}{section}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+\newenvironment{solution}
+  {\begin{proof}[Решение:]}
+  {\end{proof}}
+
+\renewcommand*{\maketitle}{
+\begin{titlepage}
+	\centering
+	{\scshape\ министерство образования и науки российской федерации\par}
+	%\vspace{0.5cm}
+	{\scshape федеральное государственное автономное образовательное учреждение высшего образования\par}
+	{\scshape"московский физико-технический институт (национальный исследовательский университет)" \par}
+	%\vspace{0.5cm}
+	{\scshape физтех-школа биологической и медицинской физики\par}
+	%\vspace{0.5cm}
+	{\scshape кафедра биоинформатики и системной биологии}
+	\vspace{1cm}
+	\rule{150mm}{.1pt}
+	{\scshape Выпускная квалификационная работа по направлению 03.03.01\par прикладная математика и физика\par}
+	{\scshape на тему:\par}
+	{\scshape\Large{\bf Разработка нового метода Connectivity Map основанного на топологических метриках вершин генных сетей}}
+	
+    \vspace{6.0cm}	
+    \hfill \break
+    Студент \underline{\hspace{10.5cm}} Минаева М.В.\par
+    Научный руководитель  \underline{\hspace{6.3cm}}  Муртазалиева Х.A.\par
+    Зав. кафедрой регент-профессор, PhD, профессор \underline{\hspace{0.15cm}}  Бородовский М.Ю.\par
+    \begin{center}
+    МОСКВА, 2020
+    \end{center}
+\end{titlepage}
+
+}
+
+\newcommand{\Section}[2]{
+\section*{#1\quad #2}
+\addcontentsline{toc}{section}{#1\quad #2}
+\stepcounter{section}
+}
+
+\newcommand{\Subsection}[2]{
+\section*{#1\quad #2}
+\addcontentsline{toc}{subsection}{#1\quad #2}
+\stepcounter{subsection}
+}
