@@ -6,13 +6,6 @@
 \usepackage{csquotes}
 \usepackage{fancyhdr}
 
-\fancypagestyle{bib}{
-	\fancyhf{}
-	\rhead{\scshape\it{{СПИСОК ЛИТЕРАТУРЫ}}}
-	\fancyfoot[C]{\thepage}
-	\renewcommand{\headrulewidth}{0.4pt}
-}
-
 
 \pagestyle{fancy}
 \delimitershortfall-1sp
@@ -27,7 +20,6 @@
 }
 
 \addbibresource{references.bib}
-\renewcommand\tableautorefname{Список использованных источников}
 
 
 \begin{document}
@@ -59,8 +51,7 @@
 \nocite{*}
 \newpage
 
-\pagestyle{bib} 
-\anonsection{Список использованных источников}
+\section{Список используемых источников}
 \printbibliography[heading=none]
 \end{document}
  
