@@ -1,0 +1,74 @@
+\documentclass[14pt, a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{style}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage[backend=biber, sorting=none, style=numeric-comp]{biblatex}
+\usepackage{csquotes}
+\usepackage{fancyhdr}
+\usepackage{makecell}
+\usepackage{setspace}
+\usepackage{xltabular}
+\usepackage[table,xcdraw]{xcolor}
+\pagestyle{fancy}
+\delimitershortfall-1sp
+\usepackage[fontsize=14pt]{scrextend}
+\renewcommand{\baselinestretch}{1.5}
+\setlength{\parindent}{1.25cm}
+\usepackage{titlesec}
+\titleformat*{\section}{\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat*{\subsubsection}{\normalsize\bfseries}
+
+
+\newcommand{\anonsection}[1]{
+    \phantomsection % Корректный переход по ссылкам в содержании
+    \section*{#1}
+    \addcontentsline{toc}{section}{\uppercase{#1}}
+}
+
+\addbibresource{references.bib}
+
+\addto\captionsrussian{\renewcommand{\figurename}{Рисунок}}
+\usepackage[labelsep=endash]{caption}
+
+
+\begin{document}
+%\maketitle
+%\newpage
+%\clearpage
+\setcounter{page}{2}
+\subfile{annotation}
+\newpage
+
+\tableofcontents
+\newpage
+
+\subfile{glossary}
+\newpage
+
+\subfile{introduction}
+\newpage
+
+\subfile{materials_and_methods}
+\newpage  
+ 
+\subfile{results}
+\newpage
+\clearpage
+\subfile{conclusions}
+\newpage
+
+\subfile{acknowledgements}
+\nocite{*}
+\newpage
+
+\section{Список используемых источников}
+\printbibliography[heading=none]
+\clearpage
+\subfile{supplements}
+\newpage
+\end{document}
+ 
+ 
